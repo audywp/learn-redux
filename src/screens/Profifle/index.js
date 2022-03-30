@@ -1,21 +1,35 @@
 import {View, Text, TouchableOpacity, TextInput} from 'react-native';
-import React from 'react';
-import {useSelector} from 'react-redux';
+import React, {useState} from 'react';
+import {useSelector, useDispatch} from 'react-redux';
+import {setNama, setAge} from './redux/action';
 
 export default function Profile() {
+  const dispatch = useDispatch();
+
   const nama = useSelector(state => state.profile.name);
   const age = useSelector(state => state.profile.age);
+  const dataStore = useSelector(state => state);
+
+  const [myName, setMyName] = useState('');
+  const [hobbies, setHobbies] = useState(['tidur', 'makan', 'tidur lagi']);
+
+  console.log(dataStore);
+
   return (
     <View>
       <Text>Profile</Text>
 
-      <Text>{}</Text>
+      <Text>{hobbies}</Text>
 
       <TextInput
         placeholder="isikan nama anda"
-        // onChangeText={text => setNama(text)}
+        onChangeText={text => setMyName(text)}
       />
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() => {
+          dispatch(setNama(myName));
+          dispatch(setAge(30));
+        }}>
         <Text>update nama</Text>
       </TouchableOpacity>
       <Text>

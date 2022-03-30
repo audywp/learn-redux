@@ -33,3 +33,4 @@ export default function App() {
 // adalah tempat penyimpanan yang lebih spesifik
 
 // action
+// adalah setter untuk memberi nilai ke suatu state pada reducer /& store kita

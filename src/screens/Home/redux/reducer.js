@@ -3,6 +3,12 @@ const initialState = {
 };
 
 const HomeReducer = (state = initialState, action) => {
+  if (action.type === 'SET_NAMA') {
+    return {
+      ...state,
+      nama: action.nama,
+    };
+  }
   return state;
 };
 export default HomeReducer;
