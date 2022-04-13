@@ -41,7 +41,6 @@ export default function Home() {
       </TouchableOpacity>
     );
   };
-  color;
 
   if (loading) {
     return (
