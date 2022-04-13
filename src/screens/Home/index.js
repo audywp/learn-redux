@@ -7,7 +7,7 @@ import {
   FlatList,
 } from 'react-native';
 import React from 'react';
-import {useDispatch, useSelector, useState} from 'react-redux';
+import {useDispatch, useSelector} from 'react-redux';
 import {ms} from 'react-native-size-matters';
 import {IMAGE_URL} from '../../Helpers/api';
 import {getDataMovie, getDetailMovieById} from './redux/action';
