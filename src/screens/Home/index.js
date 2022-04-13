@@ -5,6 +5,7 @@ import {
   ActivityIndicator,
   TouchableOpacity,
   FlatList,
+  StyleSheet,
 } from 'react-native';
 import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
@@ -14,6 +15,9 @@ import {getDataMovie, getDetailMovieById} from './redux/action';
 
 export default function Home() {
   const {loading, theme} = useSelector(state => state.Global);
+  const style = StyleSheet.create({
+    button: {color: theme === 'light' ? 'black' : 'white'},
+  });
   const dispatch = useDispatch();
 
   const {nowPlaying = []} = useSelector(state => state.home);
@@ -37,6 +41,7 @@ export default function Home() {
       </TouchableOpacity>
     );
   };
+  color;
 
   if (loading) {
     return (
@@ -58,9 +63,7 @@ export default function Home() {
         }}
       />
       <TouchableOpacity onPress={getDataMovies}>
-        <Text style={{color: theme === 'light' ? 'black' : 'white'}}>
-          get data Now Playing
-        </Text>
+        <Text style={style.button}>get data Now Playing</Text>
       </TouchableOpacity>
       <Text>Home</Text>
     </View>
