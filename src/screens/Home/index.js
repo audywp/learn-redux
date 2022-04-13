@@ -4,15 +4,15 @@ import {
   Image,
   ActivityIndicator,
   TouchableOpacity,
+  FlatList,
 } from 'react-native';
-import React, {useEffect} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
-import {FlatList} from 'react-native-gesture-handler';
+import React from 'react';
+import {useDispatch, useSelector, useState} from 'react-redux';
 import {ms} from 'react-native-size-matters';
 import {IMAGE_URL} from '../../Helpers/api';
 import {getDataMovie, getDetailMovieById} from './redux/action';
 
-export default function Home(props) {
+export default function Home() {
   const {loading, theme} = useSelector(state => state.Global);
   const dispatch = useDispatch();
 
@@ -49,9 +49,13 @@ export default function Home(props) {
   return (
     <View>
       <FlatList
+        testID="list movie"
         data={nowPlaying}
         keyExtractor={item => item.id}
         renderItem={MovieContainer}
+        ListEmptyComponent={() => {
+          return <Text testID="empty state">There is no data</Text>;
+        }}
       />
       <TouchableOpacity onPress={getDataMovies}>
         <Text style={{color: theme === 'light' ? 'black' : 'white'}}>
