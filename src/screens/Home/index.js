@@ -41,7 +41,7 @@ export default function Home() {
   if (loading) {
     return (
       <View flex={1} justifyContent="center" alignItems="center">
-        <ActivityIndicator size={ms(120)} />
+        <ActivityIndicator size={ms(120)} color="red" />
       </View>
     );
   }
