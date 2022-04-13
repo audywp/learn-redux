@@ -1,7 +1,6 @@
 // RootNavigation.js
 
 import {createNavigationContainerRef} from '@react-navigation/native';
-import {Appearance} from 'react-native';
 
 export const navigationRef = createNavigationContainerRef();
 

@@ -1,5 +1,5 @@
 import axios from 'axios';
-import {BASE_URL, TOKEN} from '../../../Helpers/api';
+import {BASE_URL} from '../../../Helpers/api';
 import {navigate} from '../../../Helpers/navigate';
 import {setLoading} from '../../../store/globalAction';
 import {store} from '../../../store';

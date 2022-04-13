@@ -1,5 +1,5 @@
 import {Text} from 'react-native';
-import React, {Children} from 'react';
+import React from 'react';
 
 export default function Poppins({size = 12, color = 'black', children}) {
   return (

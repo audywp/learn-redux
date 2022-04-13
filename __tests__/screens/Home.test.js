@@ -1,4 +1,3 @@
-import {fireEvent} from '@testing-library/react-native';
 import * as React from 'react';
 import {create} from 'react-test-renderer';
 import ContainerTesting from '../../src/Helpers/reduxTesting';

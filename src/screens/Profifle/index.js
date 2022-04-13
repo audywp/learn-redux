@@ -8,12 +8,9 @@ export default function Profile() {
 
   const nama = useSelector(state => state.profile.name);
   const age = useSelector(state => state.profile.age);
-  const dataStore = useSelector(state => state);
 
   const [myName, setMyName] = useState('');
-  const [hobbies, setHobbies] = useState(['tidur', 'makan', 'tidur lagi']);
-
-  console.log(dataStore);
+  const [hobbies] = useState(['tidur', 'makan', 'tidur lagi']);
 
   return (
     <View>
