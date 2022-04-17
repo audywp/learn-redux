@@ -28,9 +28,9 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Unit Test 
-      - run: |
-          yarn
-          yarn test
+        run: |
+            yarn
+            yarn test
         working-directory: client
 
 #       # Runs a set of commands using the runners shell
