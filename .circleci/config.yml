@@ -19,7 +19,7 @@ jobs:
       - checkout
       - run:
           name: "install yarn"
-          command: "npm i -g yarn"
+          command: "sudo npm i -g yarn"
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
