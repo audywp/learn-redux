@@ -35,7 +35,7 @@ jobs:
       - checkout
       - run :
           name: "cleaning"
-          command: "cd android && ./gradle wrapper && cd .."
+          command: "cd android && ./gradlew clean && cd .."
           
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
