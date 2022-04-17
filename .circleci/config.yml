@@ -31,7 +31,7 @@ jobs:
           
   build:
     docker:
-      - image: cimg/openjdk:11.0.13-node
+      - image: circleci/android:api-29-node
         auth: 
           username: $DOCKER_USERNAME
           password: $DOCKER_TOKEN
