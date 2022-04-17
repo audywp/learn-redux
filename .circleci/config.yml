@@ -6,7 +6,8 @@ version: 2.1
 # See: https://circleci.com/docs/2.0/configuration-reference/#jobs
 
 # orbs for android, java and node
-orbs: circleci/android:api-29-node
+orbs:
+  android: circleci/android:api-29-node
 
 jobs:
   instalasi:
