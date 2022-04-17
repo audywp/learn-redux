@@ -30,8 +30,6 @@ jobs:
       - name: Unit Test 
         run: |
           pwd
-          cd ..
-          pwd
           ls
 
 #       # Runs a set of commands using the runners shell
