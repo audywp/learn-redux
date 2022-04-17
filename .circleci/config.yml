@@ -20,7 +20,10 @@ jobs:
       - run:
           name: "install modules"
           command: "yarn"
-
+      - run:
+          name: "unit testing"
+          command: "yarn test"
+          
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
 workflows:
