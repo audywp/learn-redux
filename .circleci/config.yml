@@ -7,7 +7,7 @@ version: 2.1
 
 
 orbs: 
-  android:
+  android: circleci/android@2.0.3
 
 jobs:
   instalasi:
@@ -46,10 +46,10 @@ jobs:
           username: $DOCKER_USERNAME
           password: $DOCKER_TOKEN
           
-     
-          
     steps: 
       - checkout
+      - setup_remote_docker:
+          docker_layer_caching: true
       - run :
           name: "install dependencies"
           command: "yarn"
