@@ -31,17 +31,17 @@ jobs:
           
   build:
     docker:
-      - image: cimg/node:16.14.2
-        auth: 
-          username: $DOCKER_USERNAME
-          password: $DOCKER_TOKEN
+#       - image: cimg/node:16.14.2
+#         auth: 
+#           username: $DOCKER_USERNAME
+#           password: $DOCKER_TOKEN
           
 #       - image: cimg/android:2021.12.2
 #         auth: 
 #           username: $DOCKER_USERNAME
 #           password: $DOCKER_TOKEN
           
-      - image: cimg/openjdk:11.0.13
+      - image: cimg/openjdk:11.0.13-node
         auth: 
           username: $DOCKER_USERNAME
           password: $DOCKER_TOKEN
