@@ -3,4 +3,3 @@
 
 yarn test
 yarn lint
- rm -rf node_modules
