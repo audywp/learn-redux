@@ -22,3 +22,12 @@ jobs:
 
       - name: unit testing
         run: yarn test
+
+  check-linter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: cleaning codes
+        run: yarn lint
