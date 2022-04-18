@@ -29,5 +29,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: instalasi modules
+        run: yarn
+
       - name: cleaning codes
         run: yarn lint
