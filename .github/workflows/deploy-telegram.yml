@@ -16,8 +16,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-      # node, andoroid, java
-      - uses: docker://circleci/android:api-29-node
 
       - name: instalasi modules
         run: yarn
