@@ -7,7 +7,7 @@ describe('Poppins Testing', () => {
   test('render with 12px size', () => {
     const element = getByTestId('text component');
     expect(element).toBeTruthy();
-    expect(element.props.style.fontSize).toEqual(12);
+    expect(element.props.style.fontSize).toEqual(14);
     expect(element.props.style.color).toEqual('white');
     expect(toJSON()).toMatchSnapshot();
   });
