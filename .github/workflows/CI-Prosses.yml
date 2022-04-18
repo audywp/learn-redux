@@ -1,4 +1,4 @@
-name: Deploy to telegram
+name: CI Prosses
 
 on:
   workflow_dispatch: # allow jobs manual run
