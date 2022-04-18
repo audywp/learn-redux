@@ -1,0 +1,6 @@
+name: Deploy to telegram
+
+on:
+  workflow_dispatch: # allow jobs manual run
+  release:
+    types: [published]
