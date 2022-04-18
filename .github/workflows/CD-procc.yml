@@ -24,3 +24,8 @@ jobs:
           cd android
           ./gradlew assembleRelase
           cd ..
+
+      # - name: send file as messages
+      #   run: |
+      #     cd android/app/build/outputs/apk/release/
+      #     curl -X POST -H 'Content-Type: multipart/form-data' -F "chat_id=${{secrets.CHAT_IT_TELEGRAMKU}}" -F document=@app-release.apk ${{secrets.TG_BOT_TOKEN}}/sendDocument
