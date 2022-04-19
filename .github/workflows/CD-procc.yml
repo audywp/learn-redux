@@ -22,7 +22,7 @@ jobs:
       - name: generate apk
         run: |
           cd android
-          ./gradlew bundleRelease assembleRelease
+          ./gradlew bundleRelease
           cd ..
 
       - name: Upload App to Google Play
